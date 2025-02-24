@@ -1,17 +1,21 @@
 package testcases;
 
+import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 
 import base.BaseTest;
-import objects.InstagramLoginObjects;
-import objects.ZohoLoginPageObjects;
+import page_objects.InstagramLoginObjects;
+import page_objects.ZohoLoginPageObjects;
 
 public class Test1 extends BaseTest {
 
-	@Test
+	@Test(retryAnalyzer = listeners.RetryAnalyzer_FailureTests.class)
 	public void ZohoLoginPage() {
 		d.navigate().to(prop.getProperty("testurl")); //getting prop value from config.prop
 		d.manage().window().maximize();
@@ -22,6 +26,7 @@ public class Test1 extends BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 		
 			
