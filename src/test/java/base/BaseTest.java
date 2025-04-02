@@ -34,7 +34,7 @@ public class BaseTest {
 			d.manage().window().maximize();
 			
 		}
-			else if (prop.getProperty("browser").equalsIgnoreCase("edgr")) {
+			else if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 			d= new ChromeDriver();
 		}   else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {

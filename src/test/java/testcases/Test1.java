@@ -27,15 +27,10 @@ public class Test1 extends BaseTest {
 			e.printStackTrace();
 		}
 		
-		
-		
-			
-			
 	}
 	
 	@Test
-	public void InstaLoginPage() {
-//		Properties p = new Properties();	
+	public void InstaLoginPage() {	
 		d.navigate().to(prop.getProperty("testurl2"));
 		InstagramLoginObjects o1 = new InstagramLoginObjects(d);
 		try {
